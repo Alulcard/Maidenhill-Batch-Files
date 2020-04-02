@@ -151,7 +151,7 @@ set ScratchInstallAllUsers=allusers
 	echo:
 	echo All programs have been successfully installed. 
 	echo This prompt will automatically close in 20 seconds.
-	timeout /t 20
+	timeout /t 20000
 	:: Closes the script and Command Prompt.
 
 :Error
