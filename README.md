@@ -1,7 +1,7 @@
 # Maidenhill-Batch-Files
 Maidenhill Batch FIles
 
-The files contained in this GitHub are batch files I have created so that I can deploy apps using silent installation and other useful batch features
+The files contained in this GitHub are batch files I have created so that I can deploy apps using unattended installation and other useful batch features
 All programs are written by me (Callm Wellard).
 
 Email - we77ard13@gmail.com (personal)
