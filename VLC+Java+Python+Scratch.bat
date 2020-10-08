@@ -7,10 +7,10 @@
 :: :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ::
 
 @echo off
-set VLCInstallerLocation=Z:\SOFTWARE\VLC\"vlc-3.0.8-win64"
-set JavaInstallerLocation=Z:\SOFTWARE\Java\"jre-8u241-windows-x64"
-set PythonInstallerLocation=Z:\SOFTWARE\Python\"python-3.7.4"
-set ScratchInstallerLocation=Z:\SOFTWARE\Scratch\"Scratch Desktop Setup 3.6.0"
+set VLCInstallerLocation="Z:\SOFTWARE\VLC\vlc-3.0.11-win64.exe" 
+set JavaInstallerLocation="Z:\SOFTWARE\Java\JavaSetup8u261"
+set PythonInstallerLocation="Z:\SOFTWARE\Python\python-3.7.4"
+set ScratchInstallerLocation="Z:\SOFTWARE\Scratch\Scratch Desktop Setup 3.6.0"
 
 :: ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ::
 :: Variables. Change these to adjust the installion of each software ::
@@ -49,12 +49,14 @@ set ScratchInstallAllUsers=allusers
 :VLC
 
 	echo:
-	echo Installing VLC media player version 3.0.8.
+	echo Installing VLC media player version 3.0.11.
 
 	@echo off
 	:: "FilePath" /L="languagecode" /S
 	%VLCInstallerLocation% /L=%VLCLanguageOption% /S
 
+	:: IF %ERRORLEVEL% NEQ 0 Echo An error was found
+	:: IF %ERRORLEVEL% EQU 0 Echo No error found
 	echo:
 	if %ERRORLEVEL% NEQ 0 set FailedProgram=VLC
 	if %ERRORLEVEL% NEQ 0 GOTO Error
@@ -71,7 +73,7 @@ set ScratchInstallAllUsers=allusers
 
 	@echo off
 	echo:
-	echo Installing Java Version 8.241.
+	echo Installing Java Version 8.261.
 	echo:
 
 	if [%JavaInstallSilentData%] == [Enable] echo Silent install = Enabled
@@ -83,6 +85,8 @@ set ScratchInstallAllUsers=allusers
 	:: "FilePath" INSTALL_SILENT=Enable/Disable REMOVEOUTOFDATEJRES=1/0
 	%JavaInstallerLocation% INSTALL_SILENT=%JavaInstallSilentData% REMOVEOUTOFDATEJRES=%JavaRemoveOutOfDate%
 
+	:: IF %ERRORLEVEL% NEQ 0 Echo An error was found
+	:: IF %ERRORLEVEL% EQU 0 Echo No error found
 	echo:
 	if %ERRORLEVEL% NEQ 0 set FailedProgram=Java
 	if %ERRORLEVEL% NEQ 0 GOTO Error
@@ -114,6 +118,8 @@ set ScratchInstallAllUsers=allusers
 	:: "FilePath" InstallAllUsers=1/0 PrependPath=1/0 Include_test 1/0
 	%PythonInstallerLocation% /quiet InstallAllUsers=%PythonAllUsers% PrependPath=%PythonInstallAndScriptsDirectories% Include_test=%PythonTestScripts%
 
+	:: IF %ERRORLEVEL% NEQ 0 Echo An error was found
+	:: IF %ERRORLEVEL% EQU 0 Echo No error found
 	echo:
 	if %ERRORLEVEL% NEQ 0 set FailedProgram=Python
 	if %ERRORLEVEL% NEQ 0 GOTO Error
@@ -138,6 +144,8 @@ set ScratchInstallAllUsers=allusers
 	:: "FilePath" Silent Instal InstallAllUsers
 	%ScratchInstallerLocation% /S %ScratchInstallAllUsers%
  
+	:: IF %ERRORLEVEL% NEQ 0 Echo An error was found
+	:: IF %ERRORLEVEL% EQU 0 Echo No error found
 	echo:
 	if %ERRORLEVEL% NEQ 0 set FailedProgram=Scratch
 	if %ERRORLEVEL% NEQ 0 GOTO Error
