@@ -1,4 +1,5 @@
 :: Run this .bat file to silently install Scratch.
+:: This file will install Scratch Desktop version 3.6.0.
 :: Requires elevation in order to install. 
 :: Running this file will cause CMD to appear on the screen and a UAC prompt
 :: Written by Callum Wellard 05/03/2020

@@ -1,4 +1,5 @@
 :: Run this .bat file to silently install Python 3.7.4.
+:: This file will install Python version 3.7.4.
 :: Requires elevation in order to install. 
 :: Running this file will cause CMD to appear on the screen and a UAC prompt
 :: https://docs.python.org/3/using/windows.html

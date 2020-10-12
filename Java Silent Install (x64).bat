@@ -1,4 +1,5 @@
 :: Run this .bat file to silently install Java.
+:: This file will install Java version 8.261.
 :: Requires elevation in order to install. 
 :: Running this file will cause CMD to appear on the screen and a UAC prompt
 :: Removing old version of Java will cause an addition Command Prompt box to appear for a few seconds
