@@ -1,4 +1,5 @@
 :: Run this .bat file to silently install VLC.
+:: This file will install VLC version 3.0.11.
 :: Requires elevation in order to install. 
 :: Running this file will cause CMD to appear on the screen and a UAC prompt 
 :: https://wiki.videolan.org/Documentation:Installing_VLC/#Alternative
