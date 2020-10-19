@@ -39,7 +39,7 @@ set ScratchInstallAllUsers=allusers
 
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 	echo:
-	echo This program will install VLC, Java, Python, and Scratch.
+	echo This program will install VLC, Java, Python, Scratch, and Kodu.
 	echo This can take a few minutes. Please be patient.
 	echo:
 	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -134,6 +134,7 @@ set ScratchInstallAllUsers=allusers
 
 :Scratch
 
+	@echo off
 	echo:
 	echo Installing Scratch.
 	echo:
@@ -149,9 +150,49 @@ set ScratchInstallAllUsers=allusers
 	echo:
 	if %ERRORLEVEL% NEQ 0 set FailedProgram=Scratch
 	if %ERRORLEVEL% NEQ 0 GOTO Error
-	if %ERRORLEVEL% EQU 0 GOTO echo Scratch has been successfully installed
+	if %ERRORLEVEL% EQU 0 echo Scratch has been successfully installed
+	
+	:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	echo:
+	echo :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+	
+:Kodu
+
+	@echo off
+	echo:
+	echo Installing Kodu. This prompt will automatically close itself after installation.
+	@echo off
+	echo:
+	echo Older versions of Kodu will be automatically uninstalled
+	@echo off
+	echo:
+	echo:
+	echo Please click "Run" if prompted.
+
+	@echo off
+	msiexec /i "Z:\SOFTWARE\Kodu\KoduSetup 1.5.53.0.msi" /passive
+		:: /quiet
+			:: Quiet mode, no user interaction
+		:: /passive
+			:: Unattended mode - progress bar only 
+
+	:: IF %ERRORLEVEL% NEQ 0 Echo An error was found
+	:: IF %ERRORLEVEL% EQU 0 Echo No error found
+	echo:
+	if %ERRORLEVEL% NEQ 0 set FailedProgram=Kodu
+	if %ERRORLEVEL% NEQ 0 GOTO Error
+	if %ERRORLEVEL% EQU 0 echo Kodu has been successfully installed
 	if %ERRORLEVEL% EQU 0 GOTO Finish
 
+:Error
+
+	echo(
+    echo %FailedProgram% has failed to install
+	pause
+	exit
+	:: pausing will allow the user to read the message and press a key to close
+	
 :Finish
 
 	echo:
@@ -159,13 +200,6 @@ set ScratchInstallAllUsers=allusers
 	echo:
 	echo All programs have been successfully installed. 
 	echo This prompt will automatically close in 20 seconds.
-	timeout /t 20000
+	timeout /t 20
+	exit
 	:: Closes the script and Command Prompt.
-
-:Error
-
-	echo(
-    echo %FailedProgram% has failed to install
-	pause
-	GOTO EOF
-	:: pausing will allow the user to read the message and press a key to close
