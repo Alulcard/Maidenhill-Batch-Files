@@ -1,5 +1,5 @@
 :: :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ::
-:: Run this .bat file to silently install VLC, Java, Python, and Scratch.                             ::
+:: Run this .bat file to silently install VLC, Java, Python, Scratch, and Kodu.                       ::
 :: May require elevation in order to install.                                                         ::
 :: Running this file will cause CMD to appear on the screen                                           ::
 :: Removing old version of Java may cause an addition Command Prompt box to appear for a few seconds ::
