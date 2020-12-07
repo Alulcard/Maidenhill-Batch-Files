@@ -2,7 +2,7 @@
 :: Run this .bat file to silently install VLC, Java, Python, and Scratch.                             ::
 :: May require elevation in order to install.                                                         ::
 :: Running this file will cause CMD to appear on the screen                                           ::
-:: Removing old version of Java may cause an addition Command Prompt box to appear for a few seconds ::
+:: Removing old version of Java may cause an addition Command Prompt box to appear for a few seconds  ::
 :: Written by Callum Wellard 05/03/2020                                                               ::
 :: :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ::
 
@@ -73,7 +73,7 @@ set ScratchInstallAllUsers=allusers
 
 	@echo off
 	echo:
-	echo Installing Java Version 8.261.
+	echo Installing Java Version 8.271.
 	echo:
 
 	if [%JavaInstallSilentData%] == [Enable] echo Silent install = Enabled
