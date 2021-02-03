@@ -8,8 +8,8 @@
 
 @echo off
 set VLCInstallerLocation="Z:\SOFTWARE\VLC\vlc-3.0.11-win64.exe" 
-set JavaInstallerLocation="Z:\SOFTWARE\Java\jre-8u271-windows-x64.exe"
-set PythonInstallerLocation="Z:\SOFTWARE\Python\python-3.7.4"
+set JavaInstallerLocation="Z:\SOFTWARE\Java\jre-8u281-windows-x64.exe"
+set PythonInstallerLocation="Z:\SOFTWARE\Python\python-3.7.4.exe"
 set ScratchInstallerLocation="Z:\SOFTWARE\Scratch\Scratch Desktop Setup 3.6.0"
 
 :: ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ::
@@ -73,7 +73,7 @@ set ScratchInstallAllUsers=allusers
 
 	@echo off
 	echo:
-	echo Installing Java Version 8.271.
+	echo Installing Java Version 8.281.
 	echo:
 
 	if [%JavaInstallSilentData%] == [Enable] echo Silent install = Enabled
