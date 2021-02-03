@@ -1,5 +1,5 @@
 :: Run this .bat file to silently install Java.
-:: This file will install Java version 8.261.
+:: This file will install Java version 8.281.
 :: Requires elevation in order to install. 
 :: Running this file will cause CMD to appear on the screen and a UAC prompt
 :: Removing old version of Java will cause an addition Command Prompt box to appear for a few seconds
@@ -12,7 +12,7 @@ set InstallSilentData=Enable
 :: Enable / Disable (Case sensitive)
 set RemoveOutOfDate=1
 :: Boolean
-set InstallerLocation="Z:\SOFTWARE\Java\jre-8u271-windows-x64.exe"
+set InstallerLocation="Z:\SOFTWARE\Java\jre-8u281-windows-x64.exe"
 :: Install location (Case and slash sensitive)
 
 echo:
