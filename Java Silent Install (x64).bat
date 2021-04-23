@@ -12,7 +12,7 @@ set InstallSilentData=Enable
 :: Enable / Disable (Case sensitive)
 set RemoveOutOfDate=1
 :: Boolean
-set InstallerLocation="Z:\SOFTWARE\Java\jre-8u281-windows-x64.exe"
+set InstallerLocation="Z:\SOFTWARE\Java\jre-8u291-windows-x64.exe"
 :: Install location (Case and slash sensitive)
 
 echo:

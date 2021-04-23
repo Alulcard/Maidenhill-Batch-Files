@@ -8,9 +8,10 @@ set ProgramName=Kodu
 
 @echo off
 echo:
+echo Installing Kodu. This prompt will automatically close itself after installation.
+@echo off
 echo:
-
-echo Installing %ProgramName%. This prompt will automatically close itself after installation.
+echo Older versions of Kodu will be automatically uninstalled
 @echo off
 echo:
 echo:

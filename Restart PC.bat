@@ -1,7 +1,7 @@
 shutdown /r
 :: ::::::::::::::::::::::::::  	::
 :: /r /t XXXX					::
-:: XXXX is time in seconds#		::
+:: XXXX is time in seconds		::
 :: 1 hour is 3600				::
 :: 2 hours is 7200				::
 :: 3 hours is 10800				::
