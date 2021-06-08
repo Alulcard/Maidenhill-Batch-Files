@@ -1,0 +1,1 @@
+Powershell.exe -executionpolicy remotesigned -File  "Z:\SOFTWARE\BatchFiles\WinGet\WinGet Install.ps1"
